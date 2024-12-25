@@ -9,7 +9,7 @@
 - Treesitter
 
 ## Installation
-###Packer.nvim
+### Packer.nvim
 ``` lua
 use {
 	'Abhinesh612/hyper-comment',
