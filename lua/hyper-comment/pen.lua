@@ -74,6 +74,8 @@ function M.highlight_special_comments(config)
         vim.bo.filetype,
         [[
             (comment) @comment
+            (line_comment) @comment
+            (block_comment) @comment
         ]]
     )
     local ns_id = vim.api.nvim_create_namespace('comment_highlights')

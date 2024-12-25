@@ -1,6 +1,13 @@
+// FIXME: fixme arch linux
+// Bug: Are you a bug?
+// TODO: Don't forget to do it
+// WARNING: I'm here
+// Deprecated: Who are you?
+// review: hmmm
+// hack: Mr. Robot?
+// note: I was never here
+// PREF: sudo rm -f / 
 #include <stdio.h>
-
-
 /**
  * Prints the given message to the standard output.
  * 
@@ -23,9 +30,6 @@ void print_msg(const char *message) {
 int main(int argc, char *argv[]) {
     (void) argc;
     (void) argv;
-
     print_msg("Hello, World\n");
-
     return 0;
 }
-
