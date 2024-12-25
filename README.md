@@ -40,5 +40,8 @@ This are the default configurations:
             "InsertLeave"
         }
     }
+
+	languages = { "lua", "python", "javascript", "typescript", "go", "java", "c", "cpp", "rust", "sh" }
+
 }
 ```
