@@ -8,6 +8,18 @@
 - Neovim 
 - Treesitter
 
+## Installation
+###Packer.nvim
+``` lua
+use {
+	'Abhinesh612/hyper-comment',
+	requires = {
+	'nvim-treesitter/nvim-treesitter'
+	}
+}
+
+```
+
 ## ⚙️ Configuration
 
 This are the default configurations:
