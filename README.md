@@ -1,7 +1,11 @@
 # Hyper Comments
 
 **hyper-comment** is a highlighter for tags in comments using treesitter like
-`TODO`, `NOTE`, `FIXME` in your code base.
+`TODO`, `NOTE`, `FIXME`, `@param` in your code base.
+
+
+![Hero](https://github.com/user-attachments/assets/8185e7e9-11d9-4532-bf09-4c211a4e677e)
+
 
 ## ⚡️ Requirements
 
