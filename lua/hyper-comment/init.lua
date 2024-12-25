@@ -1,4 +1,4 @@
-local pen = require('lua.hyper-comment.pen')
+local pen = require('hyper-comment.pen')
 
 local M = {}
 
