@@ -66,6 +66,8 @@ end
 
 function M.highlight_special_comments(config)
     local parser = vim.treesitter.get_parser(0)
+	if not parser then return end
+
     local tree = parser:parse()[1]
     local root = tree:root()
     local query = vim.treesitter.query.parse(
