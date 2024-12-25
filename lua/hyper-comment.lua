@@ -28,7 +28,10 @@ M.config = {
             "TextChanged",
             "InsertLeave"
         }
-    }
+	},
+
+	languages = { "lua", "python", "javascript", "typescript", "go", "java", "c", "cpp", "rust", "sh" }
+
 }
 
 local function merge_config(user_config)
@@ -53,6 +56,13 @@ local function merge_config(user_config)
             user_config.options
         )
     end
+
+	if user_config.options then
+		M.config.languages = vim.tbl_entend("force",
+			M.config.languages,
+			user_config.languages
+		)
+	end
 end
 
 local function setup_highlights()
@@ -85,8 +95,11 @@ function M.setup(user_config)
     vim.api.nvim_create_autocmd(M.config.options.update_events, {
         pattern = "*",
         callback = function()
-            pen.highlight_special_comments(M.config)
-        end
+			local filetype = vim.bo.filetype
+			if vim.tbl_contains(M.config.languages, filetype) then
+				pen.highlight_special_comments(M.config)
+			end
+		end
     })
 end
 

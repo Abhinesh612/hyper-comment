@@ -65,8 +65,8 @@ local function process_line(text, start_col, ns_id, row, config)
 end
 
 function M.highlight_special_comments(config)
-    local parser = vim.treesitter.get_parser(0)
-	if not parser then return end
+    local success, parser = pcall(vim.treesitter.get_parser, 0)
+	if not parser or not success then return end
 
     local tree = parser:parse()[1]
     local root = tree:root()
