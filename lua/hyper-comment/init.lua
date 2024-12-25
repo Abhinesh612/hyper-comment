@@ -41,15 +41,15 @@ local function merge_config(user_config)
     end
 
     if user_config.annotation_style then
-        config.annotation_style = vim.tbl_extend("force", 
+        M.config.annotation_style = vim.tbl_extend("force", 
             M.config.annotation_style, 
             user_config.annotation_style
         )
     end
 
     if user_config.options then
-        M.conifg.config.options = vim.tbl_extend("force",
-            config.options,
+        M.config.options = vim.tbl_extend("force",
+            M.config.options,
             user_config.options
         )
     end
